@@ -50,8 +50,8 @@ highlight_theme: light #  darker / pale night / light / ocean / mac / mac light 
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
-highlight_height_limit: 330 # unit: px
-code_word_wrap: false
+highlight_height_limit: 330 # 代码高度限制px
+code_word_wrap: true
 
 # copy settings
 # copyright: Add the copyright information after copied content (複制的内容后面加上版权信息)
@@ -66,23 +66,23 @@ copy:
 # formal:
 #   name: link || icon
 social:
-  # Github: https://github.com/anzhiyu-c || anzhiyu-icon-github
-  # BiliBili: https://space.bilibili.com/372204786 || anzhiyu-icon-bilibili
+  Github: https://github.com/wangai14/anzhiyu || anzhiyu-icon-github
+  BiliBili: https://space.bilibili.com/485156002?spm_id_from=333.1007.0.0 || anzhiyu-icon-bilibili
 
 # 作者卡片 状态
 author_status:
-  enable: false
+  enable: true
   # 可以是任何图片，建议放表情包或者emoji图片，效果都很好，[表情包速查](https://emotion.xiaokang.me/)
   statusImg: "https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png"
   skills:
-    # - 🤖️ 数码科技爱好者
-    # - 🔍 分享与热心帮助
-    # - 🏠 智能家居小能手
-    # - 🔨 设计开发一条龙
-    # - 🤝 专修交互与设计
-    # - 🏃 脚踏实地行动派
-    # - 🧱 团队小组发动机
-    # - 💢 壮汉人狠话不多
+    - 🤖️ 数码科技爱好者
+    - 🔍 分享与热心帮助
+    - 🏠 智能家居小能手
+    - 🔨 设计开发一条龙
+    - 🤝 专修交互与设计
+    - 🏃 脚踏实地行动派
+    - 🧱 团队小组发动机
+    - 💢 壮汉人狠话不多
 
 # search (搜索)
 # see https://blog.anheyu.com/posts/c27d.html#搜索系统
@@ -159,7 +159,7 @@ cover:
   archives_enable: true
   # the position of cover in home page (封面显示的位置)
   # left/right/both
-  position: left
+  position: both
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
     # - /img/default_cover.jpg
@@ -177,18 +177,18 @@ error_404:
 
 post_meta:
   page: # Home Page
-    date_type: created # created or updated or both 主页文章日期是创建日或者更新日或都显示
-    date_format: simple # date/relative/simple 显示日期还是相对日期 或者 简单日期
+    date_type: both # created or updated or both 主页文章日期是创建日或者更新日或都显示
+    date_format: relative # date/relative/simple 显示日期还是相对日期 或者 简单日期
     categories: true # true or false 主页是否显示分类
     tags: true # true or false 主页是否显示标籤
-    label: false # true or false 显示描述性文字
+    label: true # true or false 显示描述性文字
   post:
     date_type: both # created or updated or both 文章页日期是创建日或者更新日或都显示
-    date_format: date # date/relative 显示日期还是相对日期
+    date_format: relative # date/relative 显示日期还是相对日期
     categories: true # true or false 文章页是否显示分类
     tags: true # true or false 文章页是否显示标籤
     label: true # true or false 显示描述性文字
-    unread: false # true or false 文章未读功能
+    unread: true # true or false 文章未读功能
 
 # 主色调相关配置
 mainTone:
@@ -225,16 +225,16 @@ anchor: false
 # toc (目录)
 toc:
   post: true
-  page: false
+  page: true
   number: true
   expand: false
   style_simple: false # for post
 
 post_copyright:
   enable: true
-  decode: false
+  decode: true
   author_href:
-  location: 长沙
+  location: 上海
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
   avatarSinks: false # hover时头像下沉
@@ -286,7 +286,7 @@ post_pagination: 2
 
 # Displays outdated notice for a post (文章过期提醒)
 noticeOutdate:
-  enable: false
+  enable: true
   style: flat # style: simple/flat
   limit_day: 365 # When will it be shown
   position: top # position: top/bottom
@@ -430,7 +430,7 @@ footer:
     since: 2020
   custom_text:
   runtime:
-    enable: false
+    enable: true
     launch_time: 04/01/2021 00:00:00 # 网站上线时间
     work_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg
     work_description: 距离月入25k也就还差一个大佬带我~
@@ -439,7 +439,7 @@ footer:
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
   bdageitem:
-    enable: false
+    enable: true
     list:
       - link: https://hexo.io/ #徽标指向网站链接
         shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg #徽标API
@@ -583,7 +583,7 @@ microsoft_clarity:
 
 # Google Adsense (谷歌广告)
 google_adsense:
-  enable: false
+  enable: true
   auto_ads: true
   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
   client:
@@ -791,7 +791,7 @@ preloader:
   source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg # 自定加载动画义头像
+  avatar: https://e5bf5984.cloudflare-imgbed-csc.pages.dev/file/1753059233016_博客log.jpg
 
 # aside (侧边栏)
 # --------------------------------------
@@ -852,15 +852,15 @@ aside:
 # busuanzi count for PV / UV in site
 # 访问人数
 busuanzi:
-  site_uv: false
-  site_pv: false
-  page_pv: false
+  site_uv: true
+  site_pv: true
+  page_pv: true
 
 # Time difference between publish date and now (网页运行时间)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
   enable: true
-  publish_date: 4/1/2021 00:00:00
+  publish_date: 4/1/2025 00:00:00
 
 # Console - Newest Comments
 newest_comments:
@@ -976,7 +976,7 @@ note:
 
 icons:
   ali_iconfont_js: # 阿里图标symbol 引用链接，主题会进行加载 symbol 引用
-  fontawesome: false #是否启用fontawesome6图标
+  fontawesome: true #是否启用fontawesome6图标
   fontawesome_animation_css: #fontawesome_animation 如果有就会加载，示例值：https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css
 
 # other
@@ -985,11 +985,11 @@ icons:
 # Pjax
 # It may contain bugs and unstable, give feedback when you find the bugs.
 # https://github.com/MoOx/pjax
-pjax:
+pjax: 
   enable: true
   exclude:
-    # - xxxx
-    # - xxxx
+    - /music/
+    - /no-pjax/
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
